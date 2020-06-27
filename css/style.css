@@ -1,0 +1,221 @@
+body {
+	background-color:gray;
+	background-image: url("../images/nightsky.gif");
+	background-repeat: repeat;
+}
+
+h1 {
+	background-image: url("../images/background.png");
+	background-size:cover;
+	color:#106b53;
+	font-family: Montserrat, Georgia, sans-serif;
+	font-size:250%;
+	text-align:right;
+	font-weight:900;
+	margin:5%;
+	font-style:italic;
+	padding:1em;
+	width:80%;
+	box-shadow: 0 38px 32px -23px gray;
+	text-shadow: 2px 2px black;
+}
+
+p {
+	color:magenta;
+	font-family: Poppins, sans-serif;
+	font-size:150%;
+	text-align:right;
+	margin:15%;
+	font-weight:700;
+	padding:0.5em;
+	text-shadow: 2px 2px black;
+}
+
+blockquote {
+	color:#009933;
+	font-family: Poppins, sans-serif;
+	font-size:175%;
+	text-align:right;
+	font-weight:bold;
+	font-weight:700;
+	text-decoration:underline;
+}
+
+nav {
+	background-image: linear-gradient(to bottom left, #145A32, #1B4F72);
+	overflow:hidden;
+	margin: 10%;
+	font-size:100%;
+	text-align:center;
+	padding:0.5em;
+	font-family: Montserrat;
+	text-decoration:none;
+	box-shadow: 0 38px 32px -23px black;
+}
+
+nav a:hover {
+	color:#3333ff;
+	text-decoration:underline dotted;
+}
+
+nav a:active {
+	color:#3333ff;
+	text-decoration:underline dotted;
+}
+
+nav a:visited {
+	color:#009933;
+	text-decoration:none;
+}
+
+
+.container {
+	/*background-image: url("../images/starback.jpg");*/
+	background-size:cover;
+	background-color:black;
+	margin:15%;
+	padding:1em;
+	border-radius:5%;
+	box-shadow: 0 38px 32px -23px gray;
+}
+
+
+caption {
+	color:#333300;
+	text-decoration: underline dashed;
+	font-size:150%;
+}
+
+.ui.table{
+	width:100%;
+	margin:5% auto;
+	border-collapse:separate;
+	border-spacing: 5px;
+	font-size:125%;
+	box-shadow: 0 38px 32px -23px black;
+}
+
+.ui.striped.table > tbody tr:nth-of-type(even) {
+	background-color: #006666;
+	text-align:left;
+}
+ 
+.ui.striped.table > tbody tr:nth-of-type(odd) {
+	background-color: #3015b3;
+	}
+
+.ui.striped.table tbody:hover {
+    background:#106b53;
+}
+
+
+a:link {
+	color:red;
+	text-decoration:underline dotted;
+}
+
+a:visited {
+	color:orange;
+}
+
+a:hover {
+	color:red;
+	text-decoration:underline;
+}
+
+a:active {
+	color: orange;
+}
+
+#image {
+  position:absolute;
+  top:0;
+  left:0;
+  max-width:10px;
+  max-height:10px;
+}
+
+ul {
+	margin:10% auto;
+	font-size: 150%;
+	text-align:center;
+	border: 1px dashed black;
+	padding:1em;
+}
+
+li {
+	color:#520066;
+}
+
+form#contact label {  
+  font-weight: bold;  
+  font-size: 150%;  
+  color: magenta;  
+  line-height: 150%;
+  text-shadow: 2px 2px black;
+}
+
+#contact input:valid {
+    color: blue;
+}
+
+#contact input:invalid {
+    color: red;
+    border-color:red;
+}
+
+footer {
+	margin:5%;
+}
+
+.ui.card .description {
+  font-style:italic;
+  font-weight:bold;
+}
+
+.ui.card .date {
+  color:purple;
+}
+
+.ui-state-error {
+	font-size: 1em;
+	color: gray;
+	font-weight: bold;
+	background-color:transparent;
+	border-color:transparent;
+	margin-left:10em;
+}
+
+.validationError {
+	color: white !important;
+	background-color: gray !important;
+}
+
+.bg {
+	background-color: transparent;
+	width: 80%;
+	margin:auto;
+	padding: 10px 0px;
+}
+
+.carousel div{
+	height: 500px;
+}
+
+.carousel div img{
+	width:80%;
+	margin:auto;
+}
+
+h2 {
+	color:gray;
+}
+
+.description {
+	font-style: italic;
+	font-weight:bold;
+}
+
+.date {
+	color:purple;
+}
