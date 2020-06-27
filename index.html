@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homepage</title>
+	 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+	<link href="css/floating-totop-button.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="ui row">
+	<nav class="sixteen wide column">
+	<a href="index.html">Homepage</a>
+	<br>
+	<a href="howitbegan.html">How It Began</a>
+	<br>
+	<a href="worlds.html">E-Sports</a>
+	<br>
+	<a href="myfavouriteparts.html">My Favourite Parts</a>
+	<br>
+	<a href="plugin.html">My Plugin</a>
+</nav>
+</div>
+
+<header class = "sixteen wide column">
+<div id = "image"><img src="images/icon.png" alt="icon"></div>
+
+<h1>Riot Games</h1>
+</header>
+
+<main>
+<div class="ui container">
+	<div class="ui grid">
+		<div class="sixteen wide column">
+<p>Hello! What is your name?</p>
+	<label><input class ="name" type="text" value=""/></label>
+<p>Welcome, <span class="usrValue"></span>!</p>
+
+<p>My website is on Riot Games, the creators of my favourite game, League of Legends.</p></div>
+<div class="sixteen wide column">
+<p>League of Legends is an online game in which teams of 5 go against each other to defeat the enemies base.</p>
+</div>
+</div>
+</div>
+
+<footer>
+<p><a href ="https://www.riotgames.com/en">Riot Games Homepage</a></p>
+</footer>
+</main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+
+        crossorigin="anonymous">
+
+</script>
+
+<script src="js/floating-totop-button.js"></script>
+
+<script>
+$(document).ready(function() {
+
+
+	$("body").toTopButton({
+
+	//path to icons
+	imagePath:'./img/icons',
+	arrowType:'arrow-circle',
+	iconColor:'b',
+	iconShadow: 6,
+	opacity: 20,
+	shape: 1,
+	margin: 3,
+	position:'br',
+	border : {
+		width: 0,
+		color:''
+	},
+	size: 2,
+	btnShadow: 2,
+	scrollTrigger: 300,
+	animationTime: 700,
+	fadeInSpeed:'fast',
+	fadeOutSpeed:'fast',
+	mobileHide: 768,
+	autoHide:true
+
+	});
+
+var usrName = $('.name');
+var usrValue = $('.usrValue');
+
+usrName.on('input', function(event){
+	usrValue.html(usrName.val());
+});
+
+});
+
+</script>
+
+
+</body>
+</html>
+

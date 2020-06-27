@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Favourites</title>
+	 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <link href="css/floating-totop-button.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="ui row">
+	<nav class="sixteen wide column">
+	<a href="index.html">Homepage</a>
+	<br>
+	<a href="howitbegan.html">How It Began</a>
+	<br>
+	<a href="worlds.html">E-Sports</a>
+	<br>
+	<a href="myfavouriteparts.html">My Favourite Parts</a>
+  <br>
+  <a href ="plugin.html">My Plugin</a>
+</nav>
+</div>
+
+<header class = "sixteen wide column">
+<div id = "image"><img src="images/icon.png" alt="icon"></div>
+
+<h1>My Favourite Parts Of the Game</h1>
+</header>
+
+<main>
+<div class="container">
+<div class="ui grid">
+	<div class="ui eight wide stackable column">
+<p>I began playing League of Legends about 6 years ago now.</p></div>
+
+<div class="ui eight wide stackable column"><p>
+A friend of mine introduced me to it, and within a few short weeks, I was hooked.</p></div>
+
+<div class="ui eight wide stackable column">
+<p>I think the reason I love the game so much, is there are endless combinations.
+</p></div>
+
+<div class="ui eight wide stackable column">
+<p>There are currently over 140 characters to pick from, and many different items you can build in the game to become stronger. Games can be similar, but never quite the same.</p></div>
+
+<div class="ui eight wide stackable column">
+<p>Since it is an online game, I often call friends (especially friends who live far away) and play with them.</p></div>
+</div>
+
+<p>Here are some pictures of some of my favourite characters:</p>
+</div>
+
+<p id ="cards"></p>
+
+<script id="card-helpers" type="text/x-handlebars-template">
+  {{#each this}}
+<div class="ui grid">
+<div class="ui centered card">
+  <div class="image">
+    <img src= "{{image}}">
+  </div>
+
+  <div class="content">
+    <a class="header">{{name}}</a>
+
+    <div>
+      <span class="date">{{releasedate}}</span>
+    </div>
+
+    <div class="description">
+      {{description}}
+    </div>
+
+  </div>
+  </div>
+</div>
+{{/each}}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous">
+</script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js'>
+</script>
+
+<script  src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
+
+<script src="js/floating-totop-button.js"></script>
+
+<script>
+$(document).ready(function() {
+
+  $("body").toTopButton({
+
+  //path to icons
+  imagePath:'./img/icons',
+  arrowType:'arrow-circle',
+  iconColor:'b',
+  iconShadow: 6,
+  opacity: 20,
+  shape: 1,
+  margin: 3,
+  position:'br',
+  border : {
+    width: 0,
+    color:''
+  },
+  size: 2,
+  btnShadow: 2,
+  scrollTrigger: 300,
+  animationTime: 700,
+  fadeInSpeed:'fast',
+  fadeOutSpeed:'fast',
+  mobileHide: 768,
+  autoHide:true
+
+  });
+
+  const characters = [
+          {
+            "name":"Lux",
+            "releasedate":"Released October 10th, 2010",
+            "description":"Lux is a burst mage.",
+            "image":"images/lux.jpg"
+          },
+          {
+            "name":"Jhin",
+            "releasedate":"Released February 1st, 2016",
+            "description":"Jhin is a marksman.",
+            "image":"images/jhin.jpg"
+          },
+          {
+            "name":"Jinx",
+            "releasedate":"Released October 10th, 2013",
+            "description":"Jinx is a marksman.",
+            "image":"images/jinx.jpg"
+          }
+        ];
+
+  //Don't want to delete this but commenting out because I cannot figure out how to access the images in the JSON array to change their opacity etc
+  // $('.image').css('opacity', 0.6);
+
+  // $('.image').on({
+  //   mouseenter:function() {
+  //     $(this).fadeTo(500, 1.0);
+  //   }
+  // });
+
+  // $('.image').on({
+  //   mouseleave:function() {
+  //     $(this).fadeTo(700, 0.3);
+  //   }
+  // });
+
+  let template = Handlebars.compile($('#card-helpers').html());
+
+  let output = template(characters);
+
+  $('#cards').html(output);
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>E-Sports</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <link href="css/floating-totop-button.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="ui row">
+  <nav class="sixteen wide column">
+   <a href="index.html">Homepage</a>
+   <br>
+   <a href="howitbegan.html">How It Began</a>
+   <br>
+   <a href="worlds.html">E-Sports</a>
+   <br>
+   <a href="myfavouriteparts.html">My Favourite Parts</a>
+   <br>
+   <a href ="plugin.html">My Plugin</a>
+ </nav>
+</div>
+
+
+<header class = "sixteen wide column">
+<div id = "image"><img src="images/icon.png" alt="icon"></div>
+
+<h1>Riot and E-Sports</h1>
+</header>
+
+<main>
+  <div class="ui container">
+   <p>Every year, Riot hosts the League of Legends World Championship. This is where professional teams come together to play against each other for the champion title.</p>
+
+   <p>Worlds is held in a different country each year. This year (2019), it was held in Europe, for the first time ever. The finals were held in Paris.</p>
+
+<script id="char-template" type="text/x-handlebars-template">
+<section>
+<table class="ui striped selectable table" >
+<thead>
+<tr>
+<th>Character ID</th>
+<th>Name</th>
+<th>Type</th>
+<th>Lane</th>
+</tr>
+</thead>
+<tbody>
+{{#each this}}
+<tr>
+<td>{{charid}}</td>
+<td>{{name}} </td>
+<td>{{type}}</td>
+<td>{{lane}}</td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+</section>
+
+
+</script>
+
+<div id = "content-placeholder"></div>
+<button class="ui primary button" id="btncall">Add Character</button>
+<div class="ui modal charModal">
+<i class="close icon"></i>
+<div class="header">
+<h1>Add Character</h1>
+</div>
+
+<form name = 'newcharform' id = "newcharform" class = "ui form" >
+<div class="inline field">
+<label for = "charid" class="two wide field">Character ID</label>
+<input type = "string" class="eight wide field"  name="charid" id ="charid" autofocus  required pattern = "[0-9]+"
+                title="Please enter numeric values only">
+</div>
+
+<div class="inline field">
+<label for = "name" class="two wide field">Name</label>
+<input type = "text" name="name" id="name" class="eight wide field" required pattern = "[A-Z][a-z]+( [A-Z][a-z]+)?"
+                title="Please enter the characters name">
+</div>
+
+<div class="inline field">
+<label for = "type" class="two wide field">Type</label>
+<input type = "text" name="type" id="type" class="eight wide field" required pattern = "[A-Z][a-z]+( [A-Z][a-z]+)?"
+                title="Please enter the characters damage type">
+</div>
+
+<div class="inline field">
+<label for = "lane" class="two wide field">Lane</label>
+<input type = "text" name="lane" id="lane" class="eight wide field" required pattern = "[A-Z][a-z]+( [A-Z][a-z]+)?"
+                title="Please enter the characters lane">
+</div>
+
+<input type="submit" id="thesubmit" class="ui primary button" value="Add Character">
+
+</form>
+</div>
+
+  <p>Here is what an example to buy a ticket for Worlds might look like:</p>
+
+  <form action="processed.html" method="get" id = "contact" class="ui form">
+
+    <div class = "inline field">
+      <label for="contactname" class="two wide field">Contact Name</label>
+      <input type="text" name="contactname" id="contactname" data-h5-errorid="invalid-name" class="eight wide field" required pattern = "[A-Z][a-z]+( [A-Z][a-z]+)*" autofocus
+      title = "Please enter a name (Surname optional) with first letter capitalised.">
+      <div id="invalid-name" class="ui-state-error"></div>
+    </div>
+
+    <div class = "inline field">
+      <label for="telephonenumber" class="two wide field">Telephone number</label>
+      <input type="tel" name="telephonenumber" id="telephonenumber" data-h5-errorid="invalid-number" class="eight wide field" 
+      required pattern = "^(\(\d{3}\)|\d{3})-?\d{6,9}$"
+      title ="Please enter a valid telephone number with numbers only.">
+      <div id="invalid-number" class="ui-state-error"></div>
+    </div>
+
+    <div class = "inline field">
+      <label for="email" class="two wide field">Email Address</label>
+      <input type="email" name="email" id="email" data-h5-errorid="invalid-email" class="eight wide field" 
+      required pattern = "^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" title = "Please enter a valid email address. (Must include @ and .)">
+      <div id="invalid-email" class="ui-state-error"></div>
+    </div>
+
+
+    <div class = "inline field">
+      <label for = "eventdate" class="two wide field">When's the event happening?</label>
+      <input type="date" name="eventdate" id="eventdate" data-h5-errorid="invalid-date" class="eight wide field" required title="Invalid date.">
+      <div id="invalid-date" class="ui-state-error"></div>
+    </div>
+
+    <div class = "inline field">
+      <label for = "region" class="two wide field">What region do you play in?</label>
+      <select name="region" id="region" class="eight wide field">
+        <option value="na">North America</option>
+        <option value="euw">Europe West</option>
+        <option value="eune">Europe Nordic & East</option>
+        <option value="oce">Oceania</option>
+        <option value="rus">Russia</option>
+        <option value="tur">Turkey</option>
+        <option value="bra">Brazil</option>
+        <option value="lan">Latin America North</option>
+        <option value="las">Latin America South</option>
+        <option value="jap">Japan</option>
+      </select>
+    </div>
+
+ 
+
+    <p>What time do you plan on arriving?</p>
+
+    <div class = "grouped fields">
+      <div class="field">
+        <div class="ui radio checkbox">
+          <input style="clear:left; float:left" type="radio" name="format" id="morning" value="html"/><label for = "morning" class="ui">In the morning</label>
+        </div></div>
+
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input style="clear:left; float:left" type="radio" name="format" id="afternoon" value="html"/><label for ="afternoon" style="float:left">In the afternoon</label>
+          </div></div>
+
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input style="clear:left; float:left" type="radio" name="format" id="evening" value="html"/><label for = "evening" style="float:left">In the evening</label>
+            </div></div>
+
+          </div>
+
+          <p>Riot Games must store any information entered to process tickets/keep up to date entries on available tickets. Please confirm you are aware and accept this.</p>
+
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" id = "TandC"  name ="TandC">
+              <label for = "TandC">I am aware my information will be stored.</label>
+            </div>
+          </div>
+
+          <div class="inline field">
+            <button class="ui button blue" type="submit">Submit</button>
+            <button class="ui button red" type="reset">Clear</button>
+          </div>
+        </form>
+
+        <footer>
+        <div class="ui ordered stackable steps">
+          <div class="completed step">
+            <div class="content">
+              <div class="title">Information Processed</div>
+              <div class="description">Your information has been processed</div>
+            </div>
+          </div>
+          <div class="completed step">
+            <div class="content">
+              <div class="title">Billing</div>
+              <div class="description">Billing information entered</div>
+            </div>
+          </div>
+          <div class="active step">
+            <div class="content">
+              <div class="title">Confirm Shipping</div>
+              <div class="description">Enter shipping details</div>
+            </div>
+          </div>
+        </div>
+
+</footer>
+</div>
+</main>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous">
+</script>
+
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/h5Validate/0.9.0/jquery.h5validate.min.js"></script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js'>
+</script>
+
+<script  src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
+
+<script src="js/floating-totop-button.js"></script>
+
+<script src="js/char.js"></script>
+
+<script>
+$(document).ready(function() {
+
+    $("body").toTopButton({
+
+  //path to icons
+  imagePath:'./img/icons',
+  arrowType:'arrow-circle',
+  iconColor:'b',
+  iconShadow: 6,
+  opacity: 20,
+  shape: 1,
+  margin: 3,
+  position:'br',
+  border : {
+    width: 0,
+    color:''
+  },
+  size: 2,
+  btnShadow: 2,
+  scrollTrigger: 300,
+  animationTime: 700,
+  fadeInSpeed:'fast',
+  fadeOutSpeed:'fast',
+  mobileHide: 768,
+  autoHide:true
+});
+
+});
+
+
+
+</script>
+
+</body>
+  </html>
+

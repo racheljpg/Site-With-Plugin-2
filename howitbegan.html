@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>How It All Began</title>
+	 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+	<link href="css/floating-totop-button.css" rel="stylesheet">
+	 <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+</head>
+<body>
+	
+<div class="ui row">
+	<nav class="sixteen wide column">
+	<a href="index.html">Homepage</a>
+	<br>
+	<a href="howitbegan.html">How It Began</a>
+	<br>
+	<a href="worlds.html">E-Sports</a>
+	<br>
+	<a href="myfavouriteparts.html">My Favourite Parts</a>
+	<br>
+	<a href ="plugin.html">My Plugin</a>
+</nav>
+</div>
+
+<header class = "sixteen wide column">
+<div id = "image"><img src="images/icon.png" alt="icon"></div>
+
+<h1>History</h1>
+</header>
+
+<main>
+<div class="ui container">
+	<div class="ui grid">
+		<div class="eight wide column">
+<p>Riot Games was founded by Brandon Beck and Marc Merrill in 2006, who met in college while studying business. They bonded over video games, and this is how their friendship (and eventually business) began.</p>
+</div>
+
+<div class="eight wide column">
+<p>Brandon and Marc believed there was a gap in the market at the time. They thought companies focused too much on pumping out new games, instead of maintaining and constantly updating one, well known game. <blockquote>From this, League of Legends was born.</blockquote>
+</p>
+</div>
+
+	<ul style="list-style-type:circle;">
+		
+		<li>League of Legends is completely free to play - any in game purchases are optional (skins, boosts, etc)</li>
+		<li>When Riot Games first began, and League was first made, servers often went down as their team was so small.</li>
+		<li>As of 2018, Riot Games have 2,500 employees and 24 offices worldwide.</li>
+		<li>Many say League of Legends primarily grew due to the loyalty of the fanbase, and due to the fact it is a free to play game.</li>
+	</ul>
+</div>
+</div>
+
+<section class="bg">
+	<div class="carousel">
+		<div><img src="images/baron.png" alt="Baron"></div>
+		<div><img src="images/botlane.png" alt="Botlane"></div>
+		<div><img src="images/lolimg.png" alt="Gameplay"></div>
+		<div><img src="images/turretplating.jpg" alt ="Turret range"></div>
+		<div><img src="images/peng.png" alt 	="Penguin"></div>
+	</div>
+</section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+
+        crossorigin="anonymous">
+</script>
+
+<script src="js/floating-totop-button.js"></script>
+
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script>
+$(document).ready(function() {
+
+	$("body").toTopButton({
+
+	//path to icons
+	imagePath:'./img/icons',
+	arrowType:'arrow-circle',
+	iconColor:'b',
+	iconShadow: 6,
+	opacity: 20,
+	shape: 1,
+	margin: 3,
+	position:'br',
+	border : {
+		width: 0,
+		color:''
+	},
+	size: 2,
+	btnShadow: 2,
+	scrollTrigger: 300,
+	animationTime: 700,
+	fadeInSpeed:'fast',
+	fadeOutSpeed:'fast',
+	mobileHide: 768,
+	autoHide:true
+
+	});
+
+$('.carousel').slick({
+  autoplay: true,
+  autoplaySpeed: 2000,
+  dots: true
+});
+
+});
+
+</script>
+
+</body>
+</html>
+

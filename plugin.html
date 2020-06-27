@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Plugin</title>
+	 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+	<link href="css/floating-totop-button.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="ui row">
+	<nav class="sixteen wide column">
+	<a href="index.html">Homepage</a>
+	<br>
+	<a href="howitbegan.html">How It Began</a>
+	<br>
+	<a href="worlds.html">E-Sports</a>
+	<br>
+	<a href="myfavouriteparts.html">My Favourite Parts</a>
+	<br>
+	<a href ="plugin.html">My Plugin</a>
+</nav>
+</div>
+
+<header class = "sixteen wide column">
+<div id = "image"><img src="images/icon.png" alt="icon"></div>
+
+<h1>The Plugin I Chose</h1>
+</header>
+
+<main>
+<div class="ui container">
+	<div class="ui grid">
+		<div class="eight wide column">
+<p>The plugin I chose is an arrow which appears when you scroll down the page. <br>Clicking the arrow brings you back to the top of the page, but if you scroll back up yourself, it disappears.</p></div>
+
+<div class="eight wide column">
+<p>I chose this plugin because I thought it was very useful and relevant to any kind of website. 
+<br>I picked it out from the JQuery plugin registry. </p>
+</div>
+
+<div class="sixteen wide column">
+<p>I followed the instructions on <a href="https://www.jqueryscript.net/animation/floating-back-top-button.html">this website</a> to implement the plugin in to my webpage. It can be seen on any page on my site.</p>
+</div>
+
+<div class="sixteen wide column">
+	<p>The name of the function with the code in it is "toTopButton". Here is an example of what some of the code looks like:<br>
+		<br>
+	$("body").toTopButton({<br>
+
+	//path to icons<br>
+	imagePath:'./img/icons',<br>
+	arrowType:'arrow-circle',<br>
+	iconColor:'b',<br>
+	iconShadow: 6,<br>
+	opacity: 20,<br>
+	shape: 1,<br>
+	margin: 3,<br>
+	position:'br',<br>
+	border : {<br>
+		width: 0,<br>
+		color:''<br>
+	},<br>
+	<br>
+	<br>
+In this code, I am setting the image type and shape, and what position on the page it will be. I chose bottom right!</p>
+</div>
+</div>
+</div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+   	crossorigin="anonymous">
+</script>
+
+<script src="js/floating-totop-button.js"></script>
+
+<script>
+$(document).ready(function() {
+
+	$("body").toTopButton({
+
+	//path to icons
+	imagePath:'./img/icons',
+	arrowType:'arrow-circle',
+	iconColor:'b',
+	iconShadow: 6,
+	opacity: 20,
+	shape: 1,
+	margin: 3,
+	position:'br',
+	border : {
+		width: 0,
+		color:''
+	},
+	size: 2,
+	btnShadow: 2,
+	scrollTrigger: 300,
+	animationTime: 700,
+	fadeInSpeed:'fast',
+	fadeOutSpeed:'fast',
+	mobileHide: 768,
+	autoHide:true
+
+	});
+
+	let bgcolour = prompt("Please enter a simple colour.", "");
+
+	$('.container').css('background-color', bgcolour);
+
+	// Could not get this to work
+	// if(bgcolour === magenta){
+	// 	$('p').css('color', 'black');
+	// };
+
+});
+
+
+</script>
+
+
+</body>
+</html>
+
